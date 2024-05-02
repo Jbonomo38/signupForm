@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.left-hand {
+    flex: 1;
+    background-image: url('images/Background.jpg'); /* Update with the correct path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0px; /* Adjust for perfect alignment */
+    color: white;
+    min-width: 30%;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* 20% visible, 80% transparent */
+}
+
+.logo img {
+    height: 100px;
+}
+
+.logo-text {
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: 10px; /* Adjust as needed */
+    font-family: 'Norse Bold', 'Arial', sans-serif;
+}
+
+.attribution {
+    font-size: 12px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.right-hand {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+}
+
+.head {
+    font-size: 20px; /* Slightly larger for more impact */
+    text-align: left;
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 20px; /* Adjust spacing as needed */
+    padding: 20px;
+    width: 100%;
+}
+
+/* Adjust if there are any specific instructions or descriptions */
+.description {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666; /* Lighter text for descriptions */
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-size: 36;
+}
+
+.form-section {
+    background-color: #fff; /* Ensures background is white */
+    padding: 40px; /* Increased padding for internal spacing */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Enhancing shadow for depth */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 20px; /* Space between grid items */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    width: auto; /* Adjust width based on content */
+    margin: 0 auto; /* Centering the form */
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+    width: 200px;
+    padding: 12px; /* Increased padding for better visuals */
+    border: 2px solid #ccc; /* Make borders slightly thicker */
+    border-radius: 8px; /* Maintain rounded corners */
+    font-size: 16px; /* Larger font size for better readability */
+    box-shadow: none;
+}
+
+/* input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus {
+    border-color: #4CAF50; /* Change border color on focus */
+    outline: none; /* Remove default focus outline */
+/* } */
+
+input:focus {
+    border-color: #4CAF50; /* Highlight focus */
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4); /* Focus glow */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    grid-column: 1 / -1; /* Full width of the form container */
+    padding: 15px; /* More padding for a larger button */
+    background-color: #4CAF50; /* Consistent green background */
+    color: white;
+    font-size: 18px; /* Slightly larger text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+button:hover {
+    background-color: #367c39; /* Slightly darker green on hover */
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left-hand, .right-hand {
+        flex: 1 0 100%;
+        padding: 20px;
+    }
+
+    .form-container {
+        grid-template-columns: 1fr; /* Stack fields vertically on smaller screens */
+    }
+}
+
+.spacer {
+    height: 5%;
+}
+
+@font-face {
+    font-family: 'Norse Bold'; /* Name it whatever you like */
+    src: url('fonts/Norse-Bold.otf') format('opentype'); /* Path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}
